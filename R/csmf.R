@@ -17,8 +17,7 @@ csmf <- function(data,ker){
             pdata <- rbind(pdata[1,],pdata,pdata[nrow(pdata),])
         }
     }
-    if(!is.loaded('conv2d')) dyn.load('conv2d.so')
-    pres <- .Fortran('csmf',PACKAGE='conv2d',
+    pres <- .Fortran('csmf',
                      matrix(0.0,nrow=nrow(pdata),ncol=ncol(pdata)),
                      as.double(pdata),
                      as.double(ker),
@@ -27,7 +26,7 @@ csmf <- function(data,ker){
                      as.integer(nrow(data)),
                      as.integer(ncol(data)),
                      as.integer(ncol(ker)),
-                     as.integer(ksizecount))[[1]]
+                     as.integer(ksizecount),PACKAGE='conv2d')[[1]]
     res <- pres[(1+ksizecount):(nrow(data)+ksizecount),(1+ksizecount):(ncol(data)+ksizecount)]
     return(res)
 }
