@@ -1,0 +1,9 @@
+Package: conv2d
+Type: Package
+Title: This package offers 2d convolution via a FORTRAN subroutine
+Version: 0.2.0
+Date: 2017-04-18
+Author: Jani Anttila
+Maintainer: Jani Anttila <jani.v.anttila@gmail.com>
+Description: Just a simple 2d convolution. Useful for e.g. image smoothing.
+License: wtfpl
