@@ -1,2 +1,4 @@
 # conv2d
-Very simple 2d convolution package for R
+A very simple 2d convolution package for R. Useful for image smoothing and so on.
+
+Under development.
