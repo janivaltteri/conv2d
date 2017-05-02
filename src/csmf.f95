@@ -8,11 +8,6 @@ SUBROUTINE csmf(res,mat,ker,mxsize,mysize,oxsize,oysize,ksize,ksizecount)
   FORALL (i = 1:mxsize, j = 1:mysize)
      res(i,j) = 0.0
   END FORALL
-  !DO i = 1,mxsize
-  !   DO j = 1,mysize
-  !      res(i,j) = 0.0
-  !   END DO
-  !END DO
   DO i = (1+ksizecount),(oxsize+ksizecount)
      DO j = (1+ksizecount),(oysize+ksizecount)
         DO k = -(ksize/2),(ksize/2)
