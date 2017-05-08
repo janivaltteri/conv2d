@@ -6,4 +6,4 @@ Date: 2017-04-18
 Author: Jani Anttila
 Maintainer: Jani Anttila <jani.v.anttila@gmail.com>
 Description: Just a simple 2d convolution. Useful for e.g. image smoothing.
-License: wtfpl
+License: MIT + file LICENCE
